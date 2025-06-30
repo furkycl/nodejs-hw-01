@@ -1,3 +1,8 @@
-import { PATH_DB } from '../constants/contacts.js';
+const fs = require('fs/promises');
+const { PATH_DB } = require('../constants/contacts');
 
-export const writeContacts = async (updatedContacts) => {};
+const writeContacts = async (contacts) => {
+  await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
+};
+
+module.exports = writeContacts;
