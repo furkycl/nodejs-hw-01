@@ -1,6 +1,6 @@
-const readContacts = require('../utils/readContacts');
-const writeContacts = require('../utils/writeContacts');
-const createFakeContact = require('../utils/createFakeContact');
+import { readContacts } from '../utils/readContacts.js';
+import { writeContacts } from '../utils/writeContacts.js';
+import { createFakeContact } from '../utils/createFakeContact.js';
 
 const generateContacts = async (number = 5) => {
   const contacts = await readContacts();
